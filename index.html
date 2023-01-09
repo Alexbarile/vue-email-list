@@ -13,8 +13,13 @@
     <div id="app" class="container">
         <div class="row">
             <!-- richiamo con il v-for la lista delle 10 email e le mostro a schermo -->
-            <div class="col-12" v-for="(email,index) in emailArray">
-                {{email}}
+            <div class="col-12 mt-5">
+                <h2 class="mb-4">Lista Email</h2>
+                <button type="button" class="btn btn-primary mb-3" @click="generateEmail">Generate</button>
+                <ul>
+                    <li v-if="emailArray.length == 10" v-for="(email,index) in emailArray">{{emailArray[index]}}</li>
+                </ul>
+                
             </div>
         </div>
         
